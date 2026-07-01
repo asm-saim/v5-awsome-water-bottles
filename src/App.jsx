@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <h1> Different Types of Water Bottles</h1>
+      <h1> Buy Awesome Water Bottles</h1>
 
       <Suspense fallback={<h3>Bottles data is loading...</h3>}>
         <Bottles loadData={loadData}></Bottles>
