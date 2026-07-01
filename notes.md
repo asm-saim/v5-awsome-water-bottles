@@ -5,3 +5,8 @@
 #Different ways to store data.
 1. create a public file as .json, then fetch it.
 2. fetch data from github . not recommended.   
+
+
+##There is 2 ways to store data.
+1. my own database: if I want to save user data to all of his devices
+2. local storage: if only for that browser  
