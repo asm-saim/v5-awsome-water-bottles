@@ -7,10 +7,16 @@ function App() {
   //data loading from api
 
   const handleData = async () => {
-    const res = await fetch("./bottles.json")
+    const res = await fetch("bottles.json")
     return res.json()
   }
   const loadData = handleData()
+
+  // fetch from github:
+  // const handleData = async () => {
+  //   const res = await fetch("https://raw.githubusercontent.com/asm-saim/bottles-data/refs/heads/main/bottles.json")
+  //   return res.json()
+  // }
 
   return (
     <>
