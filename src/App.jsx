@@ -1,0 +1,26 @@
+import { Suspense } from 'react'
+import './App.css'
+import Bottles from './components/Bottles/Bottles'
+
+function App() {
+
+  //data loading from api
+
+  const handleData = async () => {
+    const res = await fetch("./bottles.json")
+    return res.json()
+  }
+  const loadData = handleData()
+
+  return (
+    <>
+      <h1> Different Types of Water Bottles</h1>
+
+      <Suspense fallback={<h3>Bottles data is loading...</h3>}>
+        <Bottles loadData={loadData}></Bottles>
+      </Suspense>
+    </>
+  )
+}
+
+export default App

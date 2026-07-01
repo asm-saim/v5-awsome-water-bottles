@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "Eco Steel Bottle",
+        "brand": "HydroMate",
+        "material": "Stainless Steel",
+        "capacity_ml": 750,
+        "color": "Black",
+        "price": 18.99,
+        "insulated": true,
+        "image": "https://example.com/images/bottle1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Pure Glass Bottle",
+        "brand": "ClearSip",
+        "material": "Glass",
+        "capacity_ml": 600,
+        "color": "Transparent",
+        "price": 14.5,
+        "insulated": false,
+        "image": "https://example.com/images/bottle2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Sport Water Bottle",
+        "brand": "FitFlow",
+        "material": "BPA-Free Plastic",
+        "capacity_ml": 1000,
+        "color": "Blue",
+        "price": 12.99,
+        "insulated": false,
+        "image": "https://example.com/images/bottle3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Thermal Flask",
+        "brand": "HeatLock",
+        "material": "Stainless Steel",
+        "capacity_ml": 500,
+        "color": "Silver",
+        "price": 24.99,
+        "insulated": true,
+        "image": "https://example.com/images/bottle4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Travel Bottle",
+        "brand": "GoHydrate",
+        "material": "Aluminum",
+        "capacity_ml": 800,
+        "color": "Green",
+        "price": 16.75,
+        "insulated": true,
+        "image": "https://example.com/images/bottle5.jpg"
+    }
+]
