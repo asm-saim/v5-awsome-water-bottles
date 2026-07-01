@@ -10,14 +10,18 @@ const Bottles = ({ loadData }) => {
 
     // state declare:
     const [purchase, setPurchase] = useState([])
+
     //event handler declare:
     const handlePurchase = (bottle) => {
-        console.log("I am from bottles", bottle)
+        // console.log("I am from bottles", bottle)
+        const newCart = [...purchase, bottle]
+        setPurchase(newCart)
     }
 
     return (
         <div>
             <h3>Total Bottles: {loadBottles.length}</h3>
+            <h3>Cart Added: {purchase.length}</h3>
             <div className="bottles-container">
                 {
                     loadBottles.map(bottle => <Bottle handlePurchase={handlePurchase}
