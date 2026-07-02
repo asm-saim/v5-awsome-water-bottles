@@ -5,6 +5,7 @@ import './Bottles.css'
 import { useState } from "react";
 import { addStoreCart, getStoreCart } from "../../utilities/localStorage";
 import { useEffect } from "react";
+import SavedCart from "../SavedCart/SavedCart";
 
 const Bottles = ({ loadData }) => {
     const loadBottles = use(loadData)
@@ -40,10 +41,19 @@ const Bottles = ({ loadData }) => {
         setPurchase(storedData)
     }, [loadBottles])
 
+    //remove id from the cart:
+    const handleRemoveIDFromCart = (id) => {
+        console.log("remove", id)
+        const remove = purchase.filter(bottle => bottle.id !== id)
+        setPurchase(remove)
+    }
     return (
         <div>
             <h3>Total Bottles: {loadBottles.length}</h3>
             <h3>Cart Added: {purchase.length}</h3>
+            <SavedCart purchase={purchase}
+                handleRemoveIDFromCart={handleRemoveIDFromCart}>
+            </SavedCart>
             <div className="bottles-container">
                 {
                     loadBottles.map(bottle => <Bottle handlePurchase={handlePurchase}
