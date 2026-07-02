@@ -9,4 +9,6 @@
 
 ##There is 2 ways to store data.
 1. my own database: if I want to save user data to all of his devices
-2. local storage: if only for that browser  
+2. local storage: if only for that browser
+
+#useEffect is a React Hook used to perform side effects (such as fetching data, setting timers, or adding event listeners) after a component renders.

@@ -3,6 +3,8 @@ import { use } from "react";
 import Bottle from "../Bottle/Bottle";
 import './Bottles.css'
 import { useState } from "react";
+import { addStoreCart, getStoreCart } from "../../utilities/localStorage";
+import { useEffect } from "react";
 
 const Bottles = ({ loadData }) => {
     const loadBottles = use(loadData)
@@ -16,7 +18,27 @@ const Bottles = ({ loadData }) => {
         // console.log("I am from bottles", bottle)
         const newCart = [...purchase, bottle]
         setPurchase(newCart)
+
+        //save the id to the Local storage
+        addStoreCart(bottle.id)
     }
+
+    //useEffect:
+    useEffect(() => {
+        const storedCardIDs = getStoreCart()
+        // console.log(storedCardIDs, loadBottles);
+
+        const storedData = []
+        for (const id of storedCardIDs) {
+            // console.log(id);
+            const cartBottle = loadBottles.find(bottle => bottle.id === id)
+            if (cartBottle) {
+                storedData.push(cartBottle)
+            }
+        }
+        console.log("added cart", storedData)
+        setPurchase(storedData)
+    }, [loadBottles])
 
     return (
         <div>

@@ -21,4 +21,7 @@ const addItemToLs = (id) => {
     const newCart = [...cart, id]
     setItemToLS(newCart)
 }
-export { getDataFromLS, addItemToLs }
+export {
+    getDataFromLS as getStoreCart,
+    addItemToLs as addStoreCart
+}
