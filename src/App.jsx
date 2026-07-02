@@ -4,13 +4,8 @@ import Bottles from './components/Bottles/Bottles'
 
 function App() {
 
-  //data loading from api
-
-  const handleData = async () => {
-    const res = await fetch("bottles.json")
-    return res.json()
-  }
-  const loadData = handleData()
+  //data loading from api: 
+  const loadData = fetch("bottles.json").then(res => res.json())
 
   // fetch from github:
   // const handleData = async () => {

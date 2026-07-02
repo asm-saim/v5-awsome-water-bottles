@@ -24,3 +24,7 @@ useEffect(() => {}, [])	        Run once after the first render
 useEffect(() => {}, [count])	Run after the first render and whenever count changes
 
 Memory trick: Think of useEffect as "After rendering, do this." That's its main job.
+
+
+//data loading from api: when we use use hook, we do nto need async , await.
+cause, both are promise  
