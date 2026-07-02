@@ -3,7 +3,7 @@ import { use } from "react";
 import Bottle from "../Bottle/Bottle";
 import './Bottles.css'
 import { useState } from "react";
-import { addStoreCart, getStoreCart } from "../../utilities/localStorage";
+import { addStoreCart, getStoreCart, removeFromLS } from "../../utilities/localStorage";
 import { useEffect } from "react";
 import SavedCart from "../SavedCart/SavedCart";
 
@@ -46,6 +46,9 @@ const Bottles = ({ loadData }) => {
         console.log("remove", id)
         const remove = purchase.filter(bottle => bottle.id !== id)
         setPurchase(remove)
+
+        //remove from local storage also.
+        removeFromLS(id)
     }
     return (
         <div>

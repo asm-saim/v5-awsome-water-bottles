@@ -21,7 +21,17 @@ const addItemToLs = (id) => {
     const newCart = [...cart, id]
     setItemToLS(newCart)
 }
+
+//remove clicked id from local storage:
+const removeCartFromLocalStorage = (id) => {
+    const storedData = getDataFromLS()
+    const remainingData = storedData.filter(bottleId => bottleId !== id)
+    setItemToLS(remainingData)
+
+}
+
 export {
     getDataFromLS as getStoreCart,
-    addItemToLs as addStoreCart
+    addItemToLs as addStoreCart,
+    removeCartFromLocalStorage as removeFromLS
 }

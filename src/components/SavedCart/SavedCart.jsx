@@ -1,7 +1,8 @@
 import './SavedCart.css'
 
-const SavedCart = ({ purchase, handleRemoveIDFromCart }) => {
-    console.log("H", purchase)
+
+const SavedCart = ({ purchase, handleRemoveIDFromCart}) => {
+    // console.log("H", purchase)
     return (
         <div className="cart-size">
             {
